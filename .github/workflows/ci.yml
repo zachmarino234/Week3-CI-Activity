@@ -1,5 +1,7 @@
 name: Run All Tests
 on:
+    schedule:
+        - cron: '30 5 * * *'
     push:
         branches:
             - main
