@@ -30,3 +30,8 @@ jobs:
               run: npm run test > results.txt
             - name: Zip results
               run: zip -r test-results.zip ./results.txt
+            - name: Upload test results artifact
+              uses: actions/upload-artifact@v3
+              with:
+                name: test-results
+                path: test-results.zip
