@@ -27,4 +27,6 @@ jobs:
             - name: Build the Project
               run: npm run build
             - name: Run tests
-              run: npm run test
+              run: npm run test > results.txt
+            - name: Zip results
+              run: zip -r test-results.zip ./results.txt
